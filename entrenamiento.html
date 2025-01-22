@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutina de Entrenamiento</title>
+ 
+</head>
+<body>
+  <div class="container">
+    <h1>Rutina de Entrenamiento</h1>
+    <div class="tabs">
+      <button class="tab" id="week1-4" onclick="showWeek(1)" style="background-color: #FF4949;">Semana 1 al 4</button>
+      <button class="tab" id="week5-8" onclick="showWeek(2)" style="background-color: #3BA1F4;">Semana 5 al 8</button>
+    </div>
+
+    <div id="week-container">
+      <!-- Aquí se cargan dinámicamente las semanas -->
+    </div>
+  </div>
+  <script>
+    const data = {
+  week1: [
+    {
+      day: "Día 1 - Fuerza Funcional",
+      exercises: [
+        { title: "Sentadillas con pesas rusas", series: 4, reps: "10-12", rpe: "6-7" },
+        { title: "Flexiones asistidas con rodillas", series: 3, reps: "10-12", rpe: "6" },
+        { title: "Remo inclinado con barra (14 kg)", series: 4, reps: "10-12", rpe: "7" },
+        { title: "Plancha (core)", series: 3, reps: "30-40 segundos", rpe: null },
+        { title: "Ejercicio Kegel WorkOut 1", series: 4, reps: "25", rpe: null },
+        { title: "Ejercicio Kegel WorkOut 2", series: 4, reps: "25", rpe: null },
+      ],
+    },
+    {
+      day: "Día 2 - Cardio y Movilidad",
+      exercises: [
+        { title: "Trotadora", series: null, reps: "20 minutos", rpe: null },
+        { title: "Estiramientos dinámicos", series: null, reps: "10 minutos", rpe: null },
+        { title: "HandGrip", series: 3, reps: "15", rpe: 2 },
+        { title: "Ejercicio Kegel WorkOut 3", series: 4, reps: "25", rpe: null },
+        { title: "Flexión de Antebrazos", series: 3, reps: "15", rpe: 4 },
+        { title: "Extensión de Antebrazos", series: 3, reps: "15", rpe: 4 },
+      ],
+    },
+    {
+      day: "Día 3 - Entrenamiento de Resistencia y Core",
+      exercises: [
+        { title: "Peso muerto con barra 14Kg", series: 4, reps: "8 - 10", rpe: 7 },
+        { title: "Levantamiento de piernas en máquina", series: 3, reps: "12-15", rpe: "6-7" },
+        { title: "Plancha Lateral", series: 3, reps: "20-30 segundos", rpe: null },
+        { title: "Mountain Climber en Silla", series: 3, reps: "12-16", rpe: null },
+        { title: "Ejercicio Kegel WorkOut 4", series: 4, reps: "25", rpe: null },
+      ],
+    },
+    {
+      day: "Día 4 - Recuperación Activa",
+      exercises: [
+        { title: "Caminata en trotadora", series: "Ritmo Ligero", reps: "15 minutos", rpe: null },
+        { title: "Movilidad y Estiramientos para postura", series: "10-15 minutos", reps: null, rpe: null },
+        { title: "Ejercicio Kegel WorkOut 4", series: 4, reps: 25, rpe: null },
+      ],
+    },
+    {
+      day: "Día 5 - Fuerza y Postura",
+      exercises: [
+        { title: "Press de hombros con pesas rusas", series: 4, reps: "10-12", rpe: 7 },
+        { title: "Remo con pesas rusas (un brazo a la vez)", series: 3, reps: 10, rpe: "6-7" },
+        { title: "Puente de glúteos (sin peso)", series: 3, reps: 15, rpe: null },
+        { title: "Plancha (core)", series: 3, reps: "30-40 segundos", rpe: null },
+      ],
+    },
+    {
+      day: "Día 6 - Cardio y Resistencia",
+      exercises: [
+        { title: "Trotadora", series: null, reps: "25 minutos", rpe: "70-80% esfuerzo" },
+        { title: "HandGrip", series: 3, reps: "15-20", rpe: null },
+        { title: "Estiramientos dinámicos", series: "10 minutos", reps: null, rpe: null },
+        { title: "Ejercicio Kegel WorkOut 1", series: 4, reps: 25, rpe: null },
+      ],
+    },
+    {
+      day: "Día 7 - Recuperación y Movilidad",
+      exercises: [
+        { title: "Estiramientos profundos para espalda y caderas", series: null, reps: "15 - 20 minutos", rpe: null },
+        { title: "Respiración diafragmática", series: null, reps: "5-10", rpe: null }
+      ],
+    },
+  ],
+  week2: [
+    {
+      day: "Día 1 - Fuerza (Cuerpo Completo)",
+      exercises: [
+        { title: "Sentadillas con discos (20-24 kg)", series: 4, reps: "8-10", rpe: "7-8" },
+        { title: "Remo con barra (14-20 kg)", series: 4, reps: "10-12", rpe: 7 },
+        { title: "Press de hombros con pesas rusas", series: 3, reps: "10-12", rpe: 7 },
+        { title: "Plancha con movimiento (llevar rodillas al codo)", series: 3, reps: "30 segundos", rpe: null },
+      ],
+    },
+    {
+      day: "Día 2 - Cardio y Movilidad",
+      exercises: [
+        { title: "Trotadora (intervalos)", series: null, reps: "20 minutos", rpe: null },
+        { title: "Mountain Climber en Silla", series: 3, reps: "15 por pierna", rpe: null },
+        { title: "Plancha Lateral con Rotación", series: 3, reps: "20 por lado", rpe: null },
+        { title: "HandGrip", series: 3, reps: "15-20", rpe: null }
+      ],
+    },
+    {
+      day: "Día 3 - Hipertrofia (Hombros y Brazos)",
+      exercises: [
+        { title: "Press Arnold con pesas rusas", series: 4, reps: "10-12", rpe: 7 },
+        { title: "Curl de bíceps con barra", series: 3, reps: "12-15", rpe: 7 },
+        { title: "Remo a un brazo con pesas rusas ", series: "3 por lado", reps: 12, rpe: "6-7" },
+        { title: "Extensiones de tríceps en máquina", series: 3, reps: "12-15", rpe: null }
+      ],
+    },
+    {
+      day: "Día 4 - Recuperación Activa",
+      exercises: [
+        { title: "Caminata en trotadora", series: "Ritmo Ligero", reps: "15 minutos", rpe: null },
+        { title: "Movilidad y Estiramientos para postura", series: "10-15 minutos", reps: null, rpe: null },
+        { title: "Ejercicio Kegel WorkOut 4", series: 4, reps: 25, rpe: null },
+      ],
+    },
+    {
+      day: "Día 5 - Fuerza y Postura",
+      exercises: [
+        { title: "Press de hombros con pesas rusas", series: 4, reps: "10-12 repeticiones", rpe: 7 },
+        { title: "Remo con pesas rusas (un brazo a la vez)", series: 3, reps: 10, rpe: "6-7" },
+        { title: "Puente de glúteos (sin peso)", series: 3, reps: 15, rpe: null },
+        { title: "Plancha (core)", series: 3, reps: "30-40 segundos", rpe: null },
+      ],
+    },
+    {
+      day: "Día 6 - Cardio y Resistencia",
+      exercises: [
+        { title: "Trotadora", series: null, reps: "25 minutos", rpe: "70-80% esfuerzo" },
+        { title: "HandGrip", series: 3, reps: "15-20 repeticiones", rpe: null },
+        { title: "Estiramientos dinámicos", series: "10 minutos", reps: null, rpe: null },
+        { title: "Ejercicio Kegel WorkOut 1", series: 4, reps: 25, rpe: null },
+      ],
+    },
+    {
+      day: "Día 7 - Recuperación y Movilidad",
+      exercises: [
+        { title: "Estiramientos profundos para espalda y caderas", series: null, reps: "15 - 20 minutos", rpe: null },
+        { title: "Respiración diafragmática", series: null, reps: "5-10 repeticiones", rpe: null }
+      ],
+    },
+  ],
+};
+
+function showWeek(weekNumber) {
+  const container = document.getElementById("week-container");
+  container.innerHTML = ""; // Limpiar contenido
+  const week = weekNumber === 1 ? data.week1 : data.week2;
+
+  week.forEach((day, index) => {
+    const dayHeader = document.createElement("div");
+    dayHeader.className = "day-header";
+    dayHeader.textContent = day.day;
+
+    const dayContent = document.createElement("div");
+    dayContent.className = "day-content";
+    dayContent.id = `day-content-${index}`;
+
+    day.exercises.forEach((exercise) => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const title = document.createElement("div");
+      title.className = "card-title";
+      title.textContent = exercise.title;
+
+      const tags = document.createElement("div");
+      tags.className = "card-tags";
+
+      if (exercise.series) {
+        const seriesTag = document.createElement("span");
+        seriesTag.className = "tag tag-series";
+        seriesTag.textContent = `${exercise.series} series`;
+        tags.appendChild(seriesTag);
+      }
+
+      if (exercise.reps) {
+        const repsTag = document.createElement("span");
+        repsTag.className = "tag tag-reps";
+        repsTag.textContent = `${exercise.reps} REP`;
+        tags.appendChild(repsTag);
+      }
+
+      if (exercise.rpe) {
+        const rpeTag = document.createElement("span");
+        rpeTag.className = "tag tag-rpe";
+        rpeTag.textContent = `RPE ${exercise.rpe}`;
+        tags.appendChild(rpeTag);
+      }
+
+      card.appendChild(title);
+      card.appendChild(tags);
+      dayContent.appendChild(card);
+    });
+
+    dayHeader.addEventListener("click", () => {
+      dayContent.classList.toggle("active");
+    });
+
+    container.appendChild(dayHeader);
+    container.appendChild(dayContent);
+  });
+}
+
+// Mostrar la primera semana por defecto
+document.addEventListener("DOMContentLoaded", () => showWeek(1));
+
+
+  </script>
+</body>
+</html>
+
+
+<style>
+  body {
+  font-family: 'Arial', sans-serif;
+  background-color: #181818;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.tab:hover {
+  opacity: 0.9;
+}
+
+.day-header {
+  background-color: #2A2A2A;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.day-header:hover {
+  background-color: #383838;
+}
+
+.card {
+  background-color: #1E1E1E;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+.tag-series {
+  background-color: #9D00FF;
+}
+
+.tag-reps {
+  background-color: #DD0B58;
+}
+
+.tag-rpe {
+  background-color: #005EFF;
+}
+
+.day-content {
+  display: none;
+  margin-left: 10px;
+}
+
+.day-content.active {
+  display: block;
+}
+
+
+</style>
