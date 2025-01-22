@@ -73,3 +73,31 @@ body {
   #custom-input {
     margin-top: 15px;
   }
+
+
+  @media (max-width: 768px) {
+    .pomodoro-container {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .timer {
+      font-size: 32px;
+    }
+  
+    .start-btn {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  
+    .tabs {
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+  
+    .tab {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  }
+  

@@ -133,42 +133,39 @@ body {
   @media (max-width: 768px) {
     .columns {
       flex-direction: column;
+      gap: 20px;
     }
-
+  
+    .column {
+      width: 85%;
+    }
+  
     .block {
-      padding: 15px;
+      padding: 20px;
     }
 
     .title {
       font-size: 20px;
     }
-
-    .pomodoro-container {
-      text-align: center;
+    
+    .habits-buttons {
+      gap: 5px;
     }
-
-    #task-form {
-      flex-direction: column;
-      gap: 10px;
+  
+    .habit-btn {
+      padding: 10px;
+      font-size: 14px;
     }
-
-    #task-form input,
-    #task-form button {
-      width: 100%;
+  
+    .habit-btn .icon {
+      font-size: 12px;
     }
-
-    #task-list {
-      padding: 0;
+     
+    .profile-image {
+      width: 80%;
+      height: auto;
+      margin-bottom: 10px;
     }
-
-    .task-item {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .task-item button {
-      width: 100%;
-      margin: 5px 0;
-    }
+     
   }
   

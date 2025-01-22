@@ -20,45 +20,12 @@
           <img src="https://inasianspaces.com/wp-content/uploads/2023/01/blue-lock-ep-11-isagi-yoichi-resolve.png?w=1024" alt="Profile" class="profile-image">
         
           <!-- Corazones (10 íconos) -->
-          <div class="hearts">
-            <!-- Repetimos el mismo SVG 10 veces -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-            </svg>
-            <!-- ... Repite hasta 10 total ... -->
-          </div>
+         
         
           <!-- Sección de estadísticas con una clase adicional .stats -->
           <div class="user-stats" style="display: flex;  flex-direction: column;">
-            <span id="user-coins">Monedas: 0</span>
-            <span id="user-hp">HP: 1000</span> <!-- Añadido para mostrar el HP -->
+            <span id="user-coins" style="color:#ffd700">Monedas: 0</span>
+            <span id="user-hp" style="color:#dc3545">HP: 1000</span> <!-- Añadido para mostrar el HP -->
           </div>
           
         </div>
@@ -73,6 +40,9 @@
             </button>
             <button class="habit-btn store" onclick="window.location.href='habitostienda.html'">
               Tienda de Malos Hábitos <span class="icon">▶</span>
+            </button>
+            <button class="habit-btn" style="background-color: #007bff;" onclick="window.location.href='entrenamiento.html'">
+              Rutina de Entrenamiento <span class="icon">▶</span>
             </button>
           </div>
         </div>
@@ -103,21 +73,7 @@
           </div>
         </div>
        
-        <div class="block bottom-block">
-          <h2>Lista de Tareas</h2>
-          <div class="task-container">
-            <!-- Formulario para agregar tareas -->
-            <form id="task-form">
-              <input type="text" id="task-input" placeholder="Nueva tarea..." required />
-              <input type="datetime-local" id="task-reminder" required />
-              <button type="submit">Agregar</button>
-            </form>
         
-            <!-- Lista de tareas -->
-            <ul id="taskList"></ul>
-
-          </div>
-        </div>
         
         
       </div>
@@ -141,7 +97,7 @@
   <script src="script.js"></script>
   <script src="pomodoro.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+  <script src="https://apis.google.com/js/api.js"></script>
   <script>
 
 document.addEventListener("DOMContentLoaded", () => {

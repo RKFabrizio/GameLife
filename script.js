@@ -1,4 +1,8 @@
-// JS opcional para interactividad.
+
+
+
+
+
 console.log("Diseño cargado correctamente.");
 
 const areas = [
