@@ -8,7 +8,10 @@
  
 </head>
 <body>
-  <div class="container">
+    <a href="index.html" class="back-button">
+        <span>&larr;</span> Regresar
+      </a>
+  <div class="container" style="margin-top:60px;">
     <h1>Rutina de Entrenamiento</h1>
     <div class="tabs">
       <button class="tab" id="week1-4" onclick="showWeek(1)" style="background-color: #FF4949;">Semana 1 al 4</button>
@@ -230,7 +233,36 @@ document.addEventListener("DOMContentLoaded", () => showWeek(1));
   padding: 0;
 }
 
+.back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #333;
+      padding: 10px 20px;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-button:hover {
+      background-color: #444;
+      transform: scale(1.05);
+    }
+
+    .back-button span {
+      font-size: 20px;
+      line-height: 0;
+    }
+
 .container {
+ 
   max-width: 768px;
   margin: 0 auto;
   padding: 20px;
