@@ -1,0 +1,75 @@
+body {
+ 
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #181818;
+    color: white;
+  }
+
+.pomodoro-container {
+    text-align: center;
+    background-color: #4C9196;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    background-color: #4C9196;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .tab:hover,
+  .tab:focus {
+    background-color: #417B80;
+  }
+  
+  .timer {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin: 20px 0;
+  }
+  
+ 
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .start-btn,
+  .reset-btn {
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    color: #4C9196;
+    font-size:20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+ 
+  
+  .hidden {
+    display: none;
+  }
+  
+  #custom-input {
+    margin-top: 15px;
+  }

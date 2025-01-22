@@ -1,0 +1,174 @@
+body {
+ 
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #181818;
+    color: white;
+  }
+  
+  .container {
+    width: 85%;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 30px;
+    font-weight: semibold;
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .columns {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    width:75%;
+  }
+  
+  .block {
+    background-color: #2A2A2A;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .top-block h2,
+  .bottom-block h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .top-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-image {
+    width: 260px;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+/* Ajusta el margen entre líneas en la sección .stats */
+.stats p {
+  margin: 2px 0;  /* ajusta a tu preferencia: 0, 2px, 5px, etc. */
+  line-height: 1.2; /* también puedes ajustar el line-height para compactar más */
+  font-size:15px;
+}
+
+/* Opcional: agrega un margen inferior a .hearts para separar de “Estadísticas” */
+.hearts {
+  margin-bottom: 10px; /* o la cantidad que necesites */
+}
+
+  
+  .bottom-block p {
+    margin: 5px 0;
+  }
+
+
+
+
+  .habits-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .habit-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .habit-btn .icon {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  /* Estilos de los botones por tipo */
+  .habit-btn.positive {
+    background-color: #2196F3; /* Azul */
+  }
+  
+  .habit-btn.prohibited {
+    background-color: #F44336; /* Rojo */
+  }
+  
+  .habit-btn.store {
+    background-color: #FFC107; /* Amarillo */
+  }
+  
+  /* Hover para cada botón */
+  .habit-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+
+  .block.top-block canvas {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .columns {
+      flex-direction: column;
+    }
+
+    .block {
+      padding: 15px;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+
+    .pomodoro-container {
+      text-align: center;
+    }
+
+    #task-form {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    #task-form input,
+    #task-form button {
+      width: 100%;
+    }
+
+    #task-list {
+      padding: 0;
+    }
+
+    .task-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .task-item button {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+  

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - GameLife</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pomodoro.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Fabrizio Diaz</h1>
+    <div class="columns">
+      <!-- Columna 1 -->
+      <div class="column">
+        <div class="block top-block">
+          <img src="https://inasianspaces.com/wp-content/uploads/2023/01/blue-lock-ep-11-isagi-yoichi-resolve.png?w=1024" alt="Profile" class="profile-image">
+        
+          <!-- Corazones (10 íconos) -->
+          <div class="hearts">
+            <!-- Repetimos el mismo SVG 10 veces -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#321BFF" stroke="white" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+            </svg>
+            <!-- ... Repite hasta 10 total ... -->
+          </div>
+        
+          <!-- Sección de estadísticas con una clase adicional .stats -->
+          <div class="user-stats" style="display: flex;  flex-direction: column;">
+            <span id="user-coins">Monedas: 0</span>
+            <span id="user-hp">HP: 1000</span> <!-- Añadido para mostrar el HP -->
+          </div>
+          
+        </div>
+        <div class="block bottom-block">
+          <h2>Hábitos Actuales</h2>
+          <div class="habits-buttons">
+            <button class="habit-btn positive" onclick="window.location.href='habitospositivos.html'">
+              Hábitos Positivos <span class="icon">▶</span>
+            </button>            
+            <button class="habit-btn prohibited" onclick="window.location.href='habitosnegativos.html'">
+              Hábitos Prohibidos <span class="icon">▶</span>
+            </button>
+            <button class="habit-btn store" onclick="window.location.href='habitostienda.html'">
+              Tienda de Malos Hábitos <span class="icon">▶</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Columna 2 -->
+      <div class="column">
+        <div class="block top-block">
+          <div class="pomodoro-container">
+            <div class="tabs">
+              <button class="tab" id="pomodoro-tab" onclick="setTimer(25, 0)">Pomodoro</button>
+              <button class="tab" id="short-break-tab" onclick="setTimer(5, 0)">Descanso Corto</button>
+              <button class="tab" id="long-break-tab" onclick="setTimer(15, 0)">Descanso Largo</button>
+              <button class="tab" id="custom-tab" onclick="customTime()">Personalizado</button>
+            </div>
+            <div class="timer">
+              <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="controls">
+              <button class="start-btn" id="start-pause-btn" onclick="toggleTimer()">INICIAR</button>
+            </div>
+            <div id="custom-input" class="hidden">
+              <input type="number" id="custom-minutes" placeholder="Minutos" min="0">
+              <input type="number" id="custom-seconds" placeholder="Segundos" min="0" max="59">
+              <button onclick="setCustomTimer()">Establecer</button>
+            </div>
+          </div>
+        </div>
+       
+        <div class="block bottom-block">
+          <h2>Lista de Tareas</h2>
+          <div class="task-container">
+            <!-- Formulario para agregar tareas -->
+            <form id="task-form">
+              <input type="text" id="task-input" placeholder="Nueva tarea..." required />
+              <input type="datetime-local" id="task-reminder" required />
+              <button type="submit">Agregar</button>
+            </form>
+        
+            <!-- Lista de tareas -->
+            <ul id="taskList"></ul>
+
+          </div>
+        </div>
+        
+        
+      </div>
+
+       <!-- Columna 3 -->
+       <div class="column">
+        <div class="block top-block" style="height: 100%;">
+          <h2>Progreso por Área</h2>
+    
+          <canvas id="areaChart" width="400" height="400"></canvas>
+        </div>
+       
+ 
+        
+        
+      </div>
+
+      
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="pomodoro.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadData(); // Cargar datos del usuario
+  updateUserStats(); // Mostrar estadísticas (Monedas y HP)
+  renderAreaChart(); // Mostrar el gráfico de áreas y experiencia
+});
+
+
+
+  </script>
+  <script>
+    const taskForm = document.getElementById('task-form');
+  const taskList = document.getElementById('task-list');
+  let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+  function saveTasksToLocalStorage() {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
+
+  function renderTasks() {
+    taskList.innerHTML = '';
+    tasks.forEach((task, index) => {
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `
+        <span>${task.name}</span>
+        <div class="actions">
+          <button onclick="editTask(${index})">Editar</button>
+          <button onclick="deleteTask(${index})">Eliminar</button>
+        </div>
+      `;
+      taskList.appendChild(listItem);
+
+      // Programar recordatorio
+      if (task.reminder && new Date(task.reminder) > new Date()) {
+        const reminderTime = new Date(task.reminder).getTime();
+        const now = new Date().getTime();
+        setTimeout(() => {
+          showNotification(task.name);
+        }, reminderTime - now);
+      }
+    });
+  }
+
+  function addTask(task) {
+    tasks.push(task);
+    saveTasksToLocalStorage();
+    renderTasks();
+  }
+
+  function editTask(index) {
+    const newName = prompt('Editar nombre de la tarea:', tasks[index].name);
+    if (newName) {
+      tasks[index].name = newName;
+      saveTasksToLocalStorage();
+      renderTasks();
+    }
+  }
+
+  function deleteTask(index) {
+    tasks.splice(index, 1);
+    saveTasksToLocalStorage();
+    renderTasks();
+  }
+
+  function showNotification(taskName) {
+    if (Notification.permission === 'granted') {
+      new Notification('Recordatorio', {
+        body: `Es hora de: ${taskName}`,
+        icon: 'https://via.placeholder.com/128', // Cambia el enlace del icono según tu preferencia
+      });
+    }
+  }
+
+  // Solicitar permiso para notificaciones
+  if (Notification.permission !== 'granted' && Notification.permission !== 'denied') {
+    Notification.requestPermission();
+  }
+
+  // Manejar el formulario de tareas
+  taskForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const taskName = document.getElementById('task-name').value;
+    const taskReminder = document.getElementById('task-reminder').value;
+
+    if (taskName.trim() === '') {
+      alert('El nombre de la tarea no puede estar vacío.');
+      return;
+    }
+
+    addTask({ name: taskName, reminder: taskReminder });
+    taskForm.reset();
+  });
+
+  // Renderizar tareas al cargar la página
+  renderTasks();
+  </script>
+    
+  
+</body>
+</html>
+
+<style>
+  .task-container {
+    margin-top: 20px;
+  }
+  
+  #task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #task-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #task-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #task-form button:hover {
+    background-color: #218838;
+  }
+  
+  #task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    color:rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #090909;
+  }
+  
+  .task-name {
+    flex: 1;
+  }
+  
+  .task-item button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .task-item button:hover {
+    background-color: #0056b3;
+  }
+  
+  .task-item button:last-child {
+    background-color: #dc3545;
+  }
+  
+  .task-item button:last-child:hover {
+    background-color: #c82333;
+  }
+  </style>
+  
