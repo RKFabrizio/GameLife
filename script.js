@@ -436,22 +436,22 @@ const shophabits = [
   {
     "id": 1,
     "name": "Jugar videojuegos 2 horas",
-    "cost": 70
+    "cost": 50
   },
   {
     "id": 2,
     "name": "Full Day de Alcohol con Amigos / Familia",
-    "cost": 130
+    "cost": 100
   },
   {
     "id": 3,
     "name": "Noche de Maratón de Series",
-    "cost": 150
+    "cost": 100
   },
   {
     "id": 4,
     "name": "Chocolate y Dulces por un Día",
-    "cost": 150
+    "cost": 120
   },
   {
     "id": 5,
