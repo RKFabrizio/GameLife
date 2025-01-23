@@ -406,29 +406,34 @@ const ranks = [
 const badhabits = [
     {
       "id": 1,
-      "name": "Dormir tarde y levantarse tarde",
+      "name": "Procrastinación (No empezar una tarea importante)",
       "penalty": 200
     },
     {
       "id": 2,
-      "name": "No hacer ejercicio",
-      "penalty": 200
+      "name": "Dormir menos de 6 horas",
+      "penalty": 150
     },
     {
       "id": 3,
-      "name": "Consumir dulces teniendo resistencia a la insulina",
-      "penalty": 200
+      "name": "Pasar más de 1 hora en redes sociales o distraído",
+      "penalty": 100
     },
     {
       "id": 4,
-      "name": "No bañarte diariamente",
-      "penalty": 200
+      "name": "Saltarte una comida importante",
+      "penalty": 100
     },
     {
       "id": 5,
-      "name": "Permanecer en cama más de 2 horas leyendo manwha o ver series por más de 3 horas",
+      "name": "No hacer ejercicio (día completamente sedentario)",
+      "penalty": 100
+    },
+    {
+      "id": 6,
+      "name": "No cumplir un objetivo diario clave",
       "penalty": 200
-    }
+    } 
   
 ];
 
@@ -460,6 +465,12 @@ const shophabits = [
   }
 ]
 
+areas.forEach(area => {
+  area.habits.forEach(habit => {
+    habit.locked = false; // Inicialmente no está bloqueado
+  });
+});
+
 
     // Cargar áreas en el selector
     const areaSelect = document.getElementById("area-select");
@@ -477,43 +488,52 @@ const shophabits = [
       const selectedArea = areas.find(
         (area) => area.id === parseInt(areaSelect.value, 10)
       );
-
+    
       habitsContainer.innerHTML = "";
-
+    
       selectedArea.habits.forEach((habit) => {
         const card = document.createElement("div");
         card.className = "habit-card";
-
+    
+        // Añadir la clase `locked` si el hábito está bloqueado
+        if (habit.locked) {
+          card.classList.add("locked");
+        }
+    
         const title = document.createElement("div");
         title.className = "habit-title";
         title.textContent = habit.name;
-
+    
         const rewards = document.createElement("div");
         rewards.className = "habit-rewards";
-
+    
         const xpDiv = document.createElement("div");
         xpDiv.className = "icon green";
         xpDiv.textContent = `+${habit.xp} XP`;
-
+    
         const coinsDiv = document.createElement("div");
         coinsDiv.className = "icon gold";
         coinsDiv.textContent = `+${habit.coins} monedas`;
-
+    
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.className = "checkbox";
         checkbox.value = habit.id;
-
+    
+        // Deshabilitar el checkbox si el hábito está bloqueado
+        checkbox.disabled = habit.locked;
+    
         rewards.appendChild(xpDiv);
         rewards.appendChild(coinsDiv);
-
+    
         card.appendChild(title);
         card.appendChild(rewards);
         card.appendChild(checkbox);
-
+    
         habitsContainer.appendChild(card);
       });
     }
+    
 
     function renderBadHabits() {
       const habitsContainer = document.getElementById("habits-container");
@@ -639,6 +659,7 @@ const shophabits = [
         );
         totalXP += habit.xp;
         user.coins += habit.coins; // Aumentar monedas del usuario por cada hábito completado
+        habit.locked = true; // Bloquear el hábito
       });
     
       selectedArea.xp += totalXP;
@@ -654,9 +675,10 @@ const shophabits = [
       );
     
       saveData(); // Guardar datos actualizados en localStorage
-      updateUserStats(); // Actualizar estadísticas del usuario en la interfaz
-      renderHabits(); // Volver a renderizar los hábitos
+      renderHabits(); // Actualizar la vista para reflejar el bloqueo
     }
+    
+    
     
 
     function saveData() {
@@ -784,4 +806,18 @@ const shophabits = [
       });
     }
     
+    function unlockAllHabits() {
+      areas.forEach((area) => {
+        area.habits.forEach((habit) => {
+          habit.locked = false; // Desbloquear todos los hábitos
+        });
+      });
+    
+      saveData(); // Guardar cambios
+      renderHabits(); // Actualizar la vista
+      alert("Todos los candados han sido levantados.");
+    }
+    
+    const unlockButton = document.getElementById("unlock-button");
+    unlockButton.addEventListener("click", unlockAllHabits);
     

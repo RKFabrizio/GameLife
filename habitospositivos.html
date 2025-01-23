@@ -178,12 +178,38 @@
   line-height: 0;
 }
 
+#unlock-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff5733; /* Color destacado */
+  color: white;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#unlock-button:hover {
+  background-color: #cc4626; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.05);
+}
+
+
+
   </style>
 </head>
 <body>
+  <button id="unlock-button">Levantar Todos los Candados</button>
   <a href="index.html" class="back-button">
     <span>&larr;</span> Regresar
   </a>
+
+ 
+
   
   <div class="container" style="margin-top:80px;">
     <div class="controls">
@@ -197,13 +223,21 @@
       <!-- Hábitos dinámicos -->
     </div>
 
-    <button id="reset-button">Reiniciar Todo</button>
+    <!-- <button id="reset-button">Reiniciar Todo</button> -->
  
     
     
   </div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const unlockButton = document.getElementById("unlock-button");
+  if (unlockButton) {
+    unlockButton.addEventListener("click", unlockAllHabits);
+  }
+});
+</script>
 </body>
 </html>
  
